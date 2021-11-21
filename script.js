@@ -50,3 +50,49 @@ function renderView(contact_obj){
     main.innerHTML += contact_node
 }
 
+function cleanUpCreate(){
+    const element = document.querySelector(".contactedit")
+    element.remove(element)
+}
+
+function renderCreate(single_contact){
+    single_node = `
+        <div class="contactedit">
+            <div class="contactimg">
+                <img src="./img/profile.jpg" class ="profilepic" alt="Profile picture">
+            </div>
+            <div class="form">
+                <form>
+                    <div class="inputcontainer">
+                        <input type="text" id="contactname" name="contactname" placeholder="Contact Name" value="${single_contact.name}">
+                        <button class="extrafield" id="extranamefield" name="extranamefield">+</button>
+                    </div>
+
+                    <div class="inputcontainer">
+                        <input type="tel" id="contactphone" name="contactphone" placeholder="Contact Phone" value="${single_contact.phone}">
+                        <button class="extrafield" id="extraphonefield" name="extraphonefield">+</button>
+                    </div>
+
+                    <div class="inputcontainer">
+                        <input type="text" id="contactaddress" name="contactaddress" placeholder="Contact Address" value="${single_contact.address}">
+                        <button class="extrafield" id="extraaddressfield" name="extraaddressfield">+</button>
+                    </div>
+                    
+                    <div class="inputcontainer">
+                        <input type="email" id="contactemail" name="contactemail" placeholder="Contact Email" value="${single_contact.email}">
+                        <button class="extrafield" id="extraemailfield" name="extraemailfield">+</button>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="button save" id="savecontact" name="savecontact">Save Contact</button>
+                        <button type="reset" class="button cancel" id="cancel" name="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `
+    
+    const main = document.querySelector(".create")
+    main.innerHTML += single_node
+
+}
