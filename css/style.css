@@ -255,3 +255,10 @@ button.extrafield {
     margin: 1vw 4.5vw;
   }
 }
+
+.inputcontainer > p{
+  padding: 1vh;
+  width: 100%;
+  background-color: rgba(196,166,232,0.75); /*rose pine moon iris*/ 
+  border-color: #59546d; /*rose pine moon inactive*/ 
+}
