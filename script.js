@@ -9,9 +9,11 @@ function cleanUpIndex(){
 
 function createSingleIndex(given_obj){
     return `
-        <div class="contact">
-            <p>${given_obj.name}</p>
-        </div>
+        <a href="page3.html">
+            <div class="contact">
+                <p>${given_obj.name}</p>
+            </div>
+        </a>
     `
 }
 
